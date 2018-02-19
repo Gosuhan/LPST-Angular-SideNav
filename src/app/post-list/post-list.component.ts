@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../core/api.service';
+import { Ipost } from '../core/ipost';
 
 @Component({
   selector: 'app-post-list',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api: ApiService) { }
+
+  posts: Ipost[];
+  errText: string;
 
   ngOnInit() {
+    this.api.getPost().subscribe( (data: Ipost[]) =>  {
+      this.posts = data;
+    }/*, err => this.errText = 'La requête a échoué !'*/); // L'erreur ne fonctionne pas !!
   }
+
 
 }

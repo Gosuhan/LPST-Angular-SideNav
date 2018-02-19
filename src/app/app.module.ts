@@ -11,9 +11,10 @@ import { UserListComponent } from './user-list/user-list.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { ApiService } from './core/api.service';
 import { HttpClientModule } from '@angular/common/http';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, ContentComponent, UserListComponent, PostListComponent],
+  declarations: [AppComponent, ContentComponent, UserListComponent, PostListComponent, UserDetailComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

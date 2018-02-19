@@ -1,3 +1,7 @@
-<p>
-  user-list works!
-</p>
+<mat-list>
+  <mat-list-item *ngFor="let u of users">
+    <a href="" [routerLink]="u.id">{{ u.name }}</a>
+  </mat-list-item>
+</mat-list>
+
+<router-outlet></router-outlet>

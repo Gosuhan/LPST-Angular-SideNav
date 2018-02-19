@@ -1,3 +1,6 @@
-<p>
-  post-list works!
-</p>
+<mat-list-item>
+  <mat-list-item *ngFor="let p of posts">{{ p.title }}></mat-list-item>
+  <mat-list-item *ngFor="let p of posts"><img src="{{ p.img }}"></mat-list-item>
+</mat-list-item>
+
+<!-- <p ngIf="errText">{{ errText }}</p> --> <!-- Ne fonctionne pas (cf. post-list.component.ts) -->
