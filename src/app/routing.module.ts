@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContentComponent } from './content/content.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { PostListComponent } from './post-list/post-list.component';
 
 const ROUTES: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home'
+    redirectTo: 'users'
   },
   {
-    component: ContentComponent,
-    path: 'home',
+    component: UserListComponent,
+    path: 'users',
   },
-  { component: ContentComponent, path: 'content' }
+  { component: PostListComponent,
+    path: 'posts' }
 ];
 
 @NgModule({
