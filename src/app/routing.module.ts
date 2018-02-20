@@ -4,6 +4,8 @@ import { ContentComponent } from './content/content.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserFormComponent } from './user-form/user-form.component';
+import { UserPostsComponent } from './user-posts/user-posts.component';
 
 const ROUTES: Routes = [
   {
@@ -14,11 +16,20 @@ const ROUTES: Routes = [
   {
     component: UserListComponent,
     path: 'users',
+    // children: [
+    //   { path: ':id', component: UserDetailComponent }
+    // ]
+  },
+  {
+    path: 'user/:id',
+    component: UserDetailComponent,
     children: [
-      { path: ':id', component: UserDetailComponent }
+      { path: 'edit', component: UserFormComponent },
+      { path: 'posts', component: UserPostsComponent }
     ]
   },
-  { component: PostListComponent,
+  {
+    component: PostListComponent,
     path: 'posts' }
 ];
 

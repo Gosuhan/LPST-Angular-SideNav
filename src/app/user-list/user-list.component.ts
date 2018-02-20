@@ -14,7 +14,7 @@ export class UserListComponent implements OnInit {
   users: Iuser[];
 
   ngOnInit() {
-    this.api.getUser().subscribe( (data: Iuser[]) =>  {
+    this.api.getUsers().subscribe( (data: Iuser[]) =>  {
       this.users = data;
     });
   }

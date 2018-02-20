@@ -12,18 +12,23 @@ import { PostListComponent } from './post-list/post-list.component';
 import { ApiService } from './core/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserFormComponent } from './user-form/user-form.component';
+import { UserService } from './core/user.service';
+import { FormsModule } from '@angular/forms';
+import { UserPostsComponent } from './user-posts/user-posts.component';
 
 @NgModule({
-  declarations: [AppComponent, ContentComponent, UserListComponent, PostListComponent, UserDetailComponent],
+  declarations: [AppComponent, ContentComponent, UserListComponent, PostListComponent, UserDetailComponent, UserFormComponent, UserPostsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RoutingModule,
     FlexLayoutModule,
     MatModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [ApiService],
+  providers: [ApiService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
