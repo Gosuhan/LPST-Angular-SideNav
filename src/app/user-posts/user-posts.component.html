@@ -2,8 +2,11 @@
 
   <mat-list>
     <mat-list-item *ngFor="let p of posts">
-      {{ p.title }}
-    </mat-list-item>
+      <a href="" (click)="selectPost(p.id); $event.preventDefault();">{{ p.title }}</a> <!-- A la place de  routerLink="/posts/{{p.id}}" -->
+      <!-- $event.preventDefault empeche le href="" de fonctionner sinon le href fonctionne après le click -->
+      <!-- balises <a> bien pour l'accessibilité, mais si on fait par ex button (cf.ci-dessous), aucun souci sans $event -->
+      <button (click)="selectPost(p.id)">VOIR</button>
+    </mat-list-item> 
   </mat-list>
 
 </div>

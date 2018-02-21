@@ -27,8 +27,12 @@ export class ApiService {
     return this.http.put(`${HOST}/users/${user.id}`, user) as Observable<Iuser>;
   }
 
-  getPost(): Observable<Ipost[]> {
+  getPosts(): Observable<Ipost[]> {
     return this.http.get('http://localhost:3000/posts') as Observable<Ipost[]>;
+  }
+
+  getPost(id): Observable<Ipost> {
+    return this.http.get(`${HOST}/posts/${id}`) as Observable<Ipost>;
   }
 
   getUserPosts(id): Observable<Ipost[]> {

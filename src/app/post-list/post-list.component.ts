@@ -15,7 +15,7 @@ export class PostListComponent implements OnInit {
   errText: string;
 
   ngOnInit() {
-    this.api.getPost().subscribe( (data: Ipost[]) =>  {
+    this.api.getPosts().subscribe( (data: Ipost[]) =>  {
       this.posts = data;
     }/*, err => this.errText = 'La requête a échoué !'*/); // L'erreur ne fonctionne pas !!
   }
