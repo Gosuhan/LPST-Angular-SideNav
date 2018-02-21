@@ -18,9 +18,10 @@ import { FormsModule } from '@angular/forms';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { PostService } from './core/post.service';
+import { PostFormComponent } from './post-form/post-form.component';
 
 @NgModule({
-  declarations: [AppComponent, ContentComponent, UserListComponent, PostListComponent, UserDetailComponent, UserFormComponent, UserPostsComponent, PostDetailComponent],
+  declarations: [AppComponent, ContentComponent, UserListComponent, PostListComponent, UserDetailComponent, UserFormComponent, UserPostsComponent, PostDetailComponent, PostFormComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
